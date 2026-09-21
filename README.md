@@ -47,13 +47,14 @@ Une fois connecté au Wi-Fi, l'ESP32 héberge une page web accessible depuis n'i
    - `Adafruit GFX`
    - `ESP32Servo`
    - `DHT sensor library`
-4. Renseigner votre SSID et mot de passe Wi-Fi dans le code
+4. Renseigner votre SSID et mot de passe Wi-Fi dans `HubDomotique/HubDomotique.ino` (variables `ssid` et `password`) — ne jamais committer vos vrais identifiants
 5. Câbler les composants selon le schéma ci-dessus
 6. Compiler et téléverser sur l'ESP32
 7. Récupérer l'adresse IP affichée dans le moniteur série et l'ouvrir dans un navigateur
 
 ## Fonctionnement
 
+0. Au démarrage, prévoir environ **1 minute de stabilisation du PIR** : le capteur déclenche des faux positifs tant qu'il n'est pas calibré, ignorer les premières détections
 1. Le PIR détecte un mouvement → la porte s'ouvre automatiquement (servo), la LED verte s'allume, le buzzer bipe, l'écran OLED affiche "OUVERT"
 2. Après quelques secondes, la porte se referme automatiquement (LED rouge, écran mis à jour)
 3. La température et l'humidité sont relevées en continu et affichées sur l'OLED et le dashboard
