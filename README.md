@@ -1,4 +1,4 @@
-# Hub Domotique — ESP32
+# Hub Domotique — ESP32 et agent IA
 
 Hub de contrôle d'accès à base d'ESP32 : détection de mouvement, ouverture automatique (servo), affichage d'état sur écran OLED, et dashboard web temps réel pour supervision et pilotage à distance. Un agent IA permet aussi d'interroger le hub en langage naturel (voir [Agent IA](#agent-ia)).
 
